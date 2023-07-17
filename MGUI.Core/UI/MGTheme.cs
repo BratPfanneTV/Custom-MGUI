@@ -160,7 +160,7 @@ namespace MGUI.Core.UI
         /// <summary>Default value to use for <see cref="MGTextBox.UnfocusedSelectionBackgroundColor"/></summary>
         public Color TextBoxUnfocusedSelectionBackground { get; set; }
 
-        public ThemeManagedVisualStateFillBrush TitleBackground { get; }
+        public ThemeManagedVisualStateFillBrush TitleBackground { get; set; }
 
         /// <summary>The fallback value to use for <see cref="MGTextBlock.ActualForeground"/> when there is no foreground color applied to the <see cref="MGTextBlock"/> or its parents.</summary>
         public ThemeManagedVisualStateColorBrush TextBlockFallbackForeground { get; }
@@ -188,7 +188,9 @@ namespace MGUI.Core.UI
             Dark_Yellow,
             Dark_Turquoise,
             Dark_OrangeBrown,
-            Dark_LightBrown
+            Dark_LightBrown,
+
+            Orpticon
         }
 
         public MGTheme(string DefaultFontFamily)
@@ -249,7 +251,14 @@ namespace MGUI.Core.UI
 
                 Color PrimaryColor, BrightNeutralColor, DropdownArrowColor;
                 float TitleShadowIntensity;
-                if (ThemeType == BuiltInTheme.Dark_Gray)
+                if (ThemeType == BuiltInTheme.Orpticon)
+                {
+                    PrimaryColor = Color.Orange;
+                    BrightNeutralColor = new(14, 14, 14);
+                    DropdownArrowColor = Color.Black;
+                    TitleShadowIntensity = 0.76f;
+                }
+                else if (ThemeType == BuiltInTheme.Dark_Gray)
                 {
                     PrimaryColor = new(188, 188, 188);
                     BrightNeutralColor = new(84, 84, 84);
