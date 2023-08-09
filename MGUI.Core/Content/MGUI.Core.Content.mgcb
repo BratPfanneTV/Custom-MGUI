@@ -307,6 +307,20 @@
 /processorParam:TextureFormat=Color
 /build:Fonts/Arial/9_Normal.spritefont
 
+#begin Fonts/Calibri_12_Bold.spritefont
+/importer:FontDescriptionImporter
+/processor:FontDescriptionProcessor
+/processorParam:PremultiplyAlpha=True
+/processorParam:TextureFormat=Compressed
+/build:Fonts/Calibri_12_Bold.spritefont
+
+#begin Fonts/Calibri_12.spritefont
+/importer:FontDescriptionImporter
+/processor:FontDescriptionProcessor
+/processorParam:PremultiplyAlpha=True
+/processorParam:TextureFormat=Compressed
+/build:Fonts/Calibri_12.spritefont
+
 #begin Icons/AngryMeteor_MilitaryIconsSet.png
 /importer:TextureImporter
 /processor:TextureProcessor
